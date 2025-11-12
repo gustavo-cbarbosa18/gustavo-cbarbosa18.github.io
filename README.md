@@ -42,6 +42,28 @@ Para visualizar a build de produção:
 npm run preview
 ```
 
+### Deploy para GitHub Pages
+
+#### Opção 1: Deploy Automático (Recomendado)
+
+O projeto está configurado com GitHub Actions para deploy automático. Quando você fizer push para a branch `main`, o site será automaticamente construído e publicado.
+
+**Configuração necessária no GitHub:**
+
+1. Vá até `Settings` > `Pages` no seu repositório
+2. Em "Source", selecione **GitHub Actions**
+3. Faça commit e push das suas alterações para a branch `main`
+
+#### Opção 2: Deploy Manual
+
+Se preferir fazer deploy manual:
+
+```bash
+npm run deploy
+```
+
+**Nota:** Certifique-se de que o arquivo `.nojekyll` está presente no diretório `public/` para evitar problemas com o processamento Jekyll do GitHub Pages.
+
 ## 🎨 Características
 
 - **Design Responsivo**: Layout adaptável para desktop, tablet e mobile
